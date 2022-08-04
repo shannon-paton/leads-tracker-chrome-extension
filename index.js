@@ -4,7 +4,8 @@ const inputBtn = document.getElementById("input-btn")
 // 1. Store the delete button in a deleteBtn variable
 const deleteBtn = document.getElementById("delete-btn")
 const ulEl = document.getElementById("ul-el")
-let leadsFromLocalStorage = JSON.parse( localStorage.getItem("myLeads") )
+const leadsFromLocalStorage = JSON.parse( localStorage.getItem("myLeads") ) // change to const
+                                                                            // since we don't re-assign it below
 
 if (leadsFromLocalStorage) {
     myLeads = leadsFromLocalStorage
