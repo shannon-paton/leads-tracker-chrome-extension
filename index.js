@@ -15,10 +15,11 @@ if (leadsFromLocalStorage) {
 // 2. Listen for double clicks on the delete button (google it!)
 // 3. When clicked, clear localStorage, myLeads, and the DOM
 
-deleteBtn.addEventListener('dblclick', () => {
+deleteBtn.addEventListener('dblclick', () => { // or can be written as ("click", function() {
     localStorage.clear();
     myLeads = [];
-    ulEl.innerHTML = ""
+    //ulEl.innerHTML = "" this is one way to do it, or
+    renderLeads() // this will render out the empty list
 });
 
 
