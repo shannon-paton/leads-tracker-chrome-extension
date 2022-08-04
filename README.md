@@ -1,1 +1,0 @@
-## Scrimba Front-End Developer course lead tracker chrome extension -- Summer 2022
