@@ -26,7 +26,7 @@ saveTabBtn.addEventListener('click', function() {
     // Save the url instead of logging it out
     myLeads.push(tabs[0].url)
     inputEl.value = ""
-    localStorage.setItem("myLeads", JSON.stringify(myLeads))
+    localStorage.setItem("myLeads", JSON.stringify(myLeads) )
     render(myLeads)
     }
 )
