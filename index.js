@@ -20,13 +20,12 @@ const tabs = [
     {url: "https://www.linkedin.com/in/per-harald-borgen/"}
 ]
 
-let myUrl = tabs[0].url
-console.log(myUrl)
+//let myUrl = tabs[0].url
+//console.log(myUrl)
 
-
-saveTabBtn.addEventListener('click', function(tabs) {
-    let firstLead = tabs[0]
-    console.log(firstLead)
+saveTabBtn.addEventListener('click', function() {
+    let myUrl = tabs[0].url
+    console.log(myUrl)
     }
 )
 
