@@ -24,8 +24,12 @@ const tabs = [
 //console.log(myUrl)
 
 saveTabBtn.addEventListener('click', function() {
+    // Save the url instead of logging it out
     let myUrl = tabs[0].url
-    console.log(myUrl)
+    myLeads.push(myUrl)
+    inputEl.value = ""
+    localStorage.setItem("myLeads", JSON.stringify(myLeads))
+    render(myLeads)
     }
 )
 
