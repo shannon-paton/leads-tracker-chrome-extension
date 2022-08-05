@@ -14,34 +14,23 @@ if (leadsFromLocalStorage) { // if leadsFromLocalStorage isn't 0, is truthy valu
                 // myLeads -> passing in argument to function
 }
 
-
-
-
-const tabs = [
-    {url: "https://www.linkedin.com/in/per-harald-borgen/"}
-]
-
 // wrote this function using original "Save input" function url from object in array
 
 saveTabBtn.addEventListener('click', function() {
     // Add the URL of the current tab -> CONNECT WITH CHROME API
-    //chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-
-
-    // });
-
     //chrome = objects
     //tabs = key
     //query = method
-    chrome.tabs.query({active: true, currentWindow: true}, function())// active tab in the current window
+    chrome.tabs.query({active: true, currentWindow: true}, function(tabs){// active tab in the current window
                                                                 // this function will run when tab is found
 
-    // Save the url instead of logging it out
+    // save the current URL
     myLeads.push(tabs[0].url)
     localStorage.setItem("myLeads", JSON.stringify(myLeads) )
     render(myLeads)
-    }
-)
+    })
+})
+
 
 function render(leads) { // low degree of reusability -- how to make this work for different parameters
     let listItems = ""
