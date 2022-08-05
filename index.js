@@ -25,14 +25,9 @@ const tabs = [
 
 saveTabBtn.addEventListener('click', function() {
     // Add the URL of the current tab -> CONNECT WITH CHROME API
-    chrome.tabs.query({active: true, currentWindow: true}, function(tabs) { // this code only works when using in
-                                                                            // chrome extension format
-         // since only one tab should be active and in the current window at once
-         // the return variable should only have one entry
-         let activeTab = tabs[0];
-         let activeTabId = activeTab.id; // or do whatever you need
+    //chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
 
-     });
+    // });
 
 
     // Save the url instead of logging it out
