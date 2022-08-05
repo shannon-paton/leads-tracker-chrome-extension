@@ -27,8 +27,14 @@ saveTabBtn.addEventListener('click', function() {
     // Add the URL of the current tab -> CONNECT WITH CHROME API
     //chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
 
+
     // });
 
+    //chrome = objects
+    //tabs = key
+    //query = method
+    chrome.tabs.query({active: true, currentWindow: true}, function())// active tab in the current window
+                                                                // this function will run when tab is found
 
     // Save the url instead of logging it out
     myLeads.push(tabs[0].url)
