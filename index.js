@@ -16,10 +16,18 @@ if (leadsFromLocalStorage) { // if leadsFromLocalStorage isn't 0, is truthy valu
 
 // 2. Listen for clicks on tabBtn. Log Per's LinkedIn URL to the console
 
-saveTabBtn.addEventListener('click', function() {
-    console.log("save tab clicked")
-}
+const tabs = [
+    {url: "https://www.linkedin.com/in/per-harald-borgen/"}
+]
 
+let myUrl = tabs[0].url
+console.log(myUrl)
+
+
+saveTabBtn.addEventListener('click', function(tabs) {
+    let firstLead = tabs[0]
+    console.log(firstLead)
+    }
 )
 
 function render(leads) { // low degree of reusability -- how to make this work for different parameters
