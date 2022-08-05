@@ -3,6 +3,7 @@ let oldLeads = [] // adding an array of old, unimportant leads, for example
 const inputEl = document.getElementById("input-el")
 const inputBtn = document.getElementById("input-btn")
 const deleteBtn = document.getElementById("delete-btn")
+const saveTabBtn = document.getElementById("save-tab-btn")
 const ulEl = document.getElementById("ul-el")
 const leadsFromLocalStorage = JSON.parse( localStorage.getItem("myLeads") ) // change to const
                                                                             // since we don't re-assign it below
