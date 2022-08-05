@@ -14,6 +14,14 @@ if (leadsFromLocalStorage) { // if leadsFromLocalStorage isn't 0, is truthy valu
                 // myLeads -> passing in argument to function
 }
 
+// 2. Listen for clicks on tabBtn. Log Per's LinkedIn URL to the console
+
+saveTabBtn.addEventListener('click', function() {
+    console.log("save tab clicked")
+}
+
+)
+
 function render(leads) { // low degree of reusability -- how to make this work for different parameters
     let listItems = ""
     for (let i = 0; i < leads.length; i++) {
