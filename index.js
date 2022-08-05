@@ -20,13 +20,11 @@ const tabs = [
     {url: "https://www.linkedin.com/in/per-harald-borgen/"}
 ]
 
-//let myUrl = tabs[0].url
-//console.log(myUrl)
+// wrote this function using original "Save input" function url from object in array
 
 saveTabBtn.addEventListener('click', function() {
     // Save the url instead of logging it out
-    let myUrl = tabs[0].url
-    myLeads.push(myUrl)
+    myLeads.push(tabs[0].url)
     inputEl.value = ""
     localStorage.setItem("myLeads", JSON.stringify(myLeads))
     render(myLeads)
