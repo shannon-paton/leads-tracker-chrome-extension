@@ -14,7 +14,8 @@ if (leadsFromLocalStorage) { // if leadsFromLocalStorage isn't 0, is truthy valu
                 // myLeads -> passing in argument to function
 }
 
-// 2. Listen for clicks on tabBtn. Log Per's LinkedIn URL to the console
+
+
 
 const tabs = [
     {url: "https://www.linkedin.com/in/per-harald-borgen/"}
@@ -23,6 +24,17 @@ const tabs = [
 // wrote this function using original "Save input" function url from object in array
 
 saveTabBtn.addEventListener('click', function() {
+    // Add the URL of the current tab -> CONNECT WITH CHROME API
+    chrome.tabs.query({active: true, currentWindow: true}, function(tabs) { // this code only works when using in
+                                                                            // chrome extension format
+         // since only one tab should be active and in the current window at once
+         // the return variable should only have one entry
+         let activeTab = tabs[0];
+         let activeTabId = activeTab.id; // or do whatever you need
+
+     });
+
+
     // Save the url instead of logging it out
     myLeads.push(tabs[0].url)
     inputEl.value = ""
